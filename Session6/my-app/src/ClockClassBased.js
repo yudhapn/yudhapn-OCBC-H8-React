@@ -15,7 +15,7 @@ export default class ClockClassBased extends Component {
   }
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
+    setInterval(this.tick.bind(this), 1000);
   }
 
   componentWillUnmount() {

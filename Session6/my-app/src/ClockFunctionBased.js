@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ClockFunctionBased() {
   const [date, setDate] = useState(new Date());
 
-  function tick() {
-    setDate(new Date());
-  }
+  const tick = () => setDate(new Date());
 
-  setInterval(() => tick(), 1000);
+  useEffect(() => {
+    const interval = setInterval(tick, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>

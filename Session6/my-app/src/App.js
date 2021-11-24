@@ -30,11 +30,11 @@ class App extends Component {
   render() {
     return (
       <>
-        <h3>Fetch data in component class-based inside componentDidMount</h3>
+        {/* <h3>Fetch data in component class-based inside componentDidMount</h3>
         <HaluClassBased />
         <br />
         <h3>Fetch data in component function-based inside useEffect</h3>
-        <HaluFunctionBased />
+        <HaluFunctionBased /> */}
         <br />
         <ClockClassBased />
         <br />
